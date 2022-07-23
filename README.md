@@ -229,3 +229,4 @@ Step 12. 選擇 DRIVER（Nodejs）及 VERSION（4.0 or later），並複製下�
 * [[MongoDB] 學習筆記(一) - 安裝、基礎CRUD、外部輸入資料、Data Type](https://medium.com/@mingjiehsu/mongodb-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-%E4%B8%80-%E5%AE%89%E8%A3%9D-%E5%9F%BA%E7%A4%8Ecrud-%E5%A4%96%E9%83%A8%E8%BC%B8%E5%85%A5%E8%B3%87%E6%96%99-data-type-1169000cf02c)
 * [MongoDB 零基礎從入門到精通](https://www.udemy.com/course/best-mongodb/)
 * [Day 12 MongoDB 資料庫介紹](https://ithelp.ithome.com.tw/articles/10205527)
+* [MongoDB 新手學習 -網路文章入門法](http://13.231.129.69/2021/08/27/mongodb-%E6%96%B0%E6%89%8B%E5%AD%B8%E7%BF%92-%E7%B6%B2%E8%B7%AF%E6%96%87%E7%AB%A0%E5%85%A5%E9%96%80%E6%B3%95/)
