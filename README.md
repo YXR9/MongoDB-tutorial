@@ -156,6 +156,9 @@ MongoDB 中，每一筆被儲存的資料為 document，其資料結構為 BSON�
 > 它會集中管理並整合來自於大量來源的大量資料。它的分析功能能讓組織從資料中推知寶貴的資料見解，以改善決策制定。
 
 解答：編號 1~5 都適合用 MongoDB 實作
+
+###### 延伸閱讀: [是否該用 MongoDB？選擇資料庫前你該了解的事](https://tw.alphacamp.co/blog/mysql-and-mongodb-comparison)
+
 ### **開始實作吧！**
 
 首先登場的是 MongoDB Atlas！！
