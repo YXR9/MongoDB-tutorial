@@ -142,21 +142,31 @@ MongoDB 中，每一筆被儲存的資料為 document，其資料結構為 BSON�
 | content  | 一般來說，產生十億瓦電力需要250平方英哩的風力發電廠。在某些地方，例如丹麥和德國，他們以風力發電為主，幾乎用盡所有適用地點  |
 
 
-### **說了這麼多 MongoDB 的特點，事實上還是有它適合與不適合的應用場景：**
-* 適合：
-    * 網站登入 & 登出
-    * 快取
-    * 大型檔案的儲存
-    * 需擴充
-    * 事件記錄
-* 不適合：
-    * 高交易需求的系統：銀行/會計系統
-    * [商業智慧（Business Intelligence，簡稱 BI）](https://www.oracle.com/tw/what-is-business-intelligence/)應用：泛指一切能針對特定問題的 BI 資料庫會進行特殊優化的查詢方式，幫助組織做出更佳決策、採取明智行動並提高業務流程效率。對於此類型應用應採用 [資料倉儲（Data Warehouse）](https://www.oracle.com/tw/database/what-is-a-data-warehouse/) 較合適。
+### **牛刀小試**
+說了這麼多 MongoDB 的特點，事實上還是有它適合與不適合的應用場景，請判斷下列這些，哪些是適合用 MongoDB 來實作的呢？
+1. 資料格式不確定 (unstable schema)，而未來很有可能調整
+1. 資料之間沒有複雜的關聯、或未來讀取資料時不需要使用 JOIN 的功能
+1. 快取：著重在快速讀取資料與可用性，而非 ACID
+1. 大型檔案的儲存
+1. 需擴充
+1. 高交易需求的系統，例如：銀行/會計系統
+1. [商業智慧（Business Intelligence，簡稱 BI）](https://www.oracle.com/tw/what-is-business-intelligence/)應用：泛指一切能針對特定問題的 BI 資料庫會進行特殊優化的查詢方式，幫助組織做出更佳決策、採取明智行動並提高業務流程效率。對於此類型應用應採用 [資料倉儲（Data Warehouse）](https://www.oracle.com/tw/database/what-is-a-data-warehouse/) 較合適。
 
 > #### 資料倉儲（Data Warehouse）
 > 它會集中管理並整合來自於大量來源的大量資料。它的分析功能能讓組織從資料中推知寶貴的資料見解，以改善決策制定。
 
-### **接下來是時候要來動動手實作 MongoDB 囉！**
+解答：編號 1~5 都適合用 MongoDB 實作
+### **開始實作吧！**
+
+首先登場的是 MongoDB Atlas！！
+
+想要在 Cloud 使用 MongoDB 的使用者，MongoDB Atlas 會是你最好的選擇😏
+
+你可以自由的在 AWS、AZURE、GCP 上多達80個區域部署使用MongoDB，所以也可以自由地將已經部署好的MongoDB做線上的跨區域部署或是跨雲搬移。
+
+同時 Atlas 亦滿足了雲端資料庫的所有需求，例如：權限/網路/備份/安全/自動化等功能。
+
+### **接下來是時候要來動動手囉~**
 
 Step 1. 建立 [MongoDB Altas](http://140.115.126.37:666/link/86#bkmrk-step-1.-%E5%BB%BA%E7%AB%8B-mongodb-a) 帳戶（可選擇使用 Google 帳戶登入）
 
@@ -206,7 +216,10 @@ Step 12. 選擇 DRIVER（Nodejs）及 VERSION（4.0 or later），並複製下�
 
 ![](https://i.imgur.com/1qyuiGw.png)
 
-###### 連接 MongoDB 示範檔案: https://github.com/YXR9/MongoDB-tutorial.git 
+### **下周預告**
+* 將 MongoDB 與 Node.js 做連結
+* 實作基礎 CRUD
+###### 連接 MongoDB 檔案: https://github.com/YXR9/MongoDB-tutorial.git 
 
 
 ### **Reference**
