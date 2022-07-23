@@ -31,6 +31,12 @@ NoSQL 資料庫最簡單的方法，資料會以機碼值組的集合表示，�
 適合用來儲存：
     
     - 社群網站或社交遊戲產生的 TB 或 PB 等級的資料
+    
+    
+
+![](https://i.imgur.com/Czay7jr.png)
+###### 圖片來源：[儲存容量單位](https://blog.miniasp.com/post/2010/04/08/unit-information-Bit-Byte-KB-MB-GB-TB-PB-EB-ZB-YB)
+
 * **Wide-Column 存放區（Wide-Column Store）**：
 
 相關資料會以一組巢狀結構機碼值組的形式儲存在單一資料行中，也就是每一行可以有不同的 column，相當於一個無限多 column 的 table，美行有很多的 NULL value（空格），可以無 schema 限制，自由擴展。如下圖：
@@ -121,6 +127,10 @@ database、collection、document及 field 為 MongoDB 資料庫最基本的四�
 | document | row |
 | field | column |
 
+用圖示化的方式來看看他們的區別：
+![](https://i.imgur.com/LTTckHI.png)
+###### 圖片來源: [Day 12 MongoDB 資料庫介紹](https://ithelp.ithome.com.tw/articles/10205527)
+
 MongoDB 中，每一筆被儲存的資料為 document，其資料結構為 BSON（binary JSON），是一種 JSON-like 的格式，例如：
 
 ![](https://i.imgur.com/oIZs2df.png)
@@ -141,9 +151,62 @@ MongoDB 中，每一筆被儲存的資料為 document，其資料結構為 BSON�
     * 事件記錄
 * 不適合：
     * 高交易需求的系統：銀行/會計系統
-    * 商業智慧（Business Intelligence，簡稱 BI）應用：針對特定問題的 BI 資料庫會進行特殊優化的查詢方式，對於此類型應用應採用 Data Warehouse 較合適。
+    * [商業智慧（Business Intelligence，簡稱 BI）](https://www.oracle.com/tw/what-is-business-intelligence/)應用：泛指一切能針對特定問題的 BI 資料庫會進行特殊優化的查詢方式，幫助組織做出更佳決策、採取明智行動並提高業務流程效率。對於此類型應用應採用 [資料倉儲（Data Warehouse）](https://www.oracle.com/tw/database/what-is-a-data-warehouse/) 較合適。
 
-### **接下來是時候要來安裝 MongoDB 囉！**
+> #### 資料倉儲（Data Warehouse）
+> 它會集中管理並整合來自於大量來源的大量資料。它的分析功能能讓組織從資料中推知寶貴的資料見解，以改善決策制定。
+
+### **接下來是時候要來動動手實作 MongoDB 囉！**
+
+Step 1. 建立 [MongoDB Altas](http://140.115.126.37:666/link/86#bkmrk-step-1.-%E5%BB%BA%E7%AB%8B-mongodb-a) 帳戶（可選擇使用 Google 帳戶登入）
+
+![](https://i.imgur.com/UnaviWb.png)
+
+Step 2. 勾選並點選 Submit
+
+![](https://i.imgur.com/pwcv8MM.png)
+
+Step 3.  選擇完即完成前置作業
+
+![](https://i.imgur.com/FWtLjmG.png)
+
+Step 4. 選擇 Shared Clusters 並點選 Create
+
+![](https://i.imgur.com/eSAW9k7.png)
+
+Step 5. 輸入名稱至 Cluster Name 欄位並點選 Create Cluster
+
+![](https://i.imgur.com/Qvmdi80.png)
+
+Step 6. 點選 Connect
+
+![](https://i.imgur.com/HuOAClf.png)
+
+Step 7. 點選 Add Your Current IP Address
+
+![](https://i.imgur.com/l0vH5T0.png)
+
+ Step 8. 點選 Add IP Address
+
+![](https://i.imgur.com/Fhtxf15.png)
+
+Step 9. 設定 Username 與 Password（可點選 Autogenerate Secure Password 自動生成密碼），並點選 Create Database User
+
+![](https://i.imgur.com/XzLusqV.png)
+
+Step 10. 點選 Choose a connection method
+
+![](https://i.imgur.com/jU9Mt8X.png)
+
+Step 11. 點選 Connect your application
+
+![](https://i.imgur.com/0AmL0ij.png)
+
+Step 12. 選擇 DRIVER（Nodejs）及 VERSION（4.0 or later），並複製下方的 connection string 至自己的 application code（<password>要填上自己的 password）如下：
+
+![](https://i.imgur.com/1qyuiGw.png)
+
+###### 連接 MongoDB 示範檔案: https://github.com/YXR9/MongoDB-tutorial.git 
 
 
 ### **Reference**
