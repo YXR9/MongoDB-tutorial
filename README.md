@@ -219,6 +219,8 @@ Step 12. 選擇 DRIVER（Nodejs）及 VERSION（4.0 or later），並複製下�
 ### **下周預告**
 * 將 MongoDB 與 Node.js 做連結
 * 實作基礎 CRUD
+* 面試 - 資料庫考題
+
 ###### 連接 MongoDB 檔案: https://github.com/YXR9/MongoDB-tutorial.git 
 
 
