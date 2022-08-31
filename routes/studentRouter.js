@@ -5,4 +5,5 @@ module.exports = (app) => {
     app.get("/students/:studentId", App.findOne);
     app.post("/students/:studentId", App.updateStudentProfile);
     app.delete("/students/:studentId", App.delete);
+    app.get("/students/:schoolId", App.detail);
 };
