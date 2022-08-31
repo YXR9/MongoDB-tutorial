@@ -43,6 +43,7 @@ app.use('/users', usersRouter);
 // });
 
 // Routes
+require('./routes/schoolRouter')(app);
 require('./routes/studentRouter')(app);
 
 // Listen on server

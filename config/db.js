@@ -5,9 +5,9 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 module.exports = app => {
-const uri = "mongodb+srv://Ru:blFfX4iYwK2fqOV9@mongodb-tutorial.xca0qfh.mongodb.net/?retryWrites=true&w=majority";
+const url = "mongodb+srv://Ru:blFfX4iYwK2fqOV9@mongodb-tutorial.xca0qfh.mongodb.net/?retryWrites=true&w=majority";
     mongoose
-    .connect(uri, { 
+    .connect(url, { 
       useNewUrlParser: true,
       useUnifiedTopology: true
     })

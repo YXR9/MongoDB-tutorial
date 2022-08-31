@@ -1,7 +1,9 @@
+const { default: mongoose } = require('mongoose');
 var Student = require('../models/student');
 
 exports.create = (req, res) => {
     const student = new Student({
+        school: req.body.school,
         name: req.body.name,
         age: req.body.age,
         gender: req.body.gender
@@ -33,8 +35,8 @@ exports.findAll = (req, res) => {
 };
 
 exports.findOne = async (req, res) => {
-    var studentId = req.params.studentId
-	Student.findById(studentId).then((result) => {
+    // var studentId = req.params.studentId
+	Student.findById(req.params.studentId).then((result) => {
         res.send(result);
         console.log(result);
 	}).catch((e) =>  res.send(e) );
@@ -57,7 +59,7 @@ exports.updateStudentProfile = (req, res) => {
 };
 
 exports.delete = (req, res) => {
-    Student.findByIdAndDelete((req.params.studentId),
+    Student.findByIdAndDelete(req.params.studentId,
         function(err, data) {
             if (err) {
                 console.log(err);
@@ -67,3 +69,22 @@ exports.delete = (req, res) => {
             }
         });
 };
+
+exports.detail = (req, res) => {
+    var schoolId = req.params.schoolId
+    Student.aggregate([
+        {
+            $match: {
+                school: { "$in": [schoolId] }
+            }
+        },
+        {
+            $lookup: {
+                from: "schools",
+                localField: "school",
+                foreignField: "_id",
+                as: "school"
+            }
+        }
+    ])
+}
